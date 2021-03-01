@@ -14,9 +14,29 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
-}
+  
+  let targetElement = document.getElementById("content");
+  // let targetElement = document.querySelector('div');
+  
+  let newHeading = document.createElement('h1');   // creating a h1 element
+  let newSubHeading = document.createElement('h2');   // creating a h2 element
+  
+  const newName = 'H1 for name of the person';
+  let nameOfPerson = document.createTextNode(newName); // creating a text element 
+  
+  const newJob = 'h2 for job of person';
+  let jobOfPerson = document.createTextNode(newJob); // creating a text element 
 
+  
+  newHeading.appendChild(nameOfPerson); // append text to h1 element
+  newSubHeading.appendChild(jobOfPerson); // append text to h1 element
+  
+  // document.targetElement.appendChild(newHeading);
+  // document.targetElement.appendChild(newSubHeading);
+  targetElement.appendChild(newHeading); //
+  targetElement.appendChild(newSubHeading);
+
+}
 /**
  *
  * Create a list of shopping items. You should use an unordered list.
