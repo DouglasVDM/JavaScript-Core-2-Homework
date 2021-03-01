@@ -29,8 +29,6 @@ function exerciseOne(arrayOfPeople) {
     targetElement.appendChild(newHeading);            // add h1 to div with id='content'
     targetElement.appendChild(newSubHeading);         // add h2 to div with id='content'
   });
-  
-
 }
 /**
  *
@@ -50,15 +48,12 @@ function exerciseTwo(shopping) {
     // console.log(shoppingItem);          // what does shopping item access?
     //  create a list item for each item in the 'shopping' array
     let listItem = document.createElement('li');
-    listItem.innerText = shoppingItem
+    listItem.innerText = shoppingItem;
   
     unorderedList.appendChild(listItem);
   
     findElement.appendChild(unorderedList);
-  })
-
-  
-
+  });
 }
 
 /**
@@ -92,6 +87,29 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  const positionForParagraph = document.getElementById('content');
+  // console.log(positionForParagraph);
+  
+  let unorderedListForBooks = document.createElement('ul');
+  positionForParagraph.appendChild(unorderedListForBooks);  
+  
+  books.forEach(book => {
+    
+    let titleAndAuthor = document.createElement('p');
+    // console.log(`${book.title} written by ${book.author}`);
+    titleAndAuthor.innerText = `${book.title} written by ${book.author}`;
+    
+    let listedItem = document.createElement('li');
+    // console.log(listedItem);
+    
+    let imageItem = document.createElement('img');
+    console.log(imageItem);
+    imageItem.style = background-color red
+    
+    unorderedListForBooks.appendChild(listedItem);
+    listedItem.appendChild(titleAndAuthor);
+    listedItem.appendChild(imageItem);
+  });  
 }
 
 //
