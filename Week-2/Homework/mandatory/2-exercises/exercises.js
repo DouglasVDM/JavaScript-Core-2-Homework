@@ -14,27 +14,22 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  
-  let targetElement = document.getElementById("content");
-  // let targetElement = document.querySelector('div');
-  
-  let newHeading = document.createElement('h1');   // creating a h1 element
-  let newSubHeading = document.createElement('h2');   // creating a h2 element
-  
-  const newName = 'H1 for name of the person';
-  let nameOfPerson = document.createTextNode(newName); // creating a text element 
-  
-  const newJob = 'h2 for job of person';
-  let jobOfPerson = document.createTextNode(newJob); // creating a text element 
+  const targetElement = document.getElementById('content'); // finding my target element.
 
+  arrayOfPeople.forEach(objectOfArray => {
+    // console.log(objectOfArray.name);  // checking what objectOfArray.name is accessing.
+    // console.log(objectOfArray.job);   // checking what objectOfArray.job is accessing.
+    
+    let newHeading = document.createElement('h1');    // creating a h1 objectOfArray
+    newHeading.innerText = objectOfArray.name;              // add text to h1 objectOfArray
+    
+    let newSubHeading = document.createElement('h2'); // creating a h2 objectOfArray
+    newSubHeading.innerText = objectOfArray.job;            // add text to h2 objectOfArray
+    
+    targetElement.appendChild(newHeading);            // add h1 to div with id='content'
+    targetElement.appendChild(newSubHeading);         // add h2 to div with id='content'
+  });
   
-  newHeading.appendChild(nameOfPerson); // append text to h1 element
-  newSubHeading.appendChild(jobOfPerson); // append text to h1 element
-  
-  // document.targetElement.appendChild(newHeading);
-  // document.targetElement.appendChild(newSubHeading);
-  targetElement.appendChild(newHeading); //
-  targetElement.appendChild(newSubHeading);
 
 }
 /**
@@ -46,6 +41,7 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+ 
 }
 
 /**
